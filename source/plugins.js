@@ -42,4 +42,7 @@ module.exports = {
     //     "dist/assets/owl.carousel.css",
     //     "dist/assets/owl.theme.default.css"
     // ],
+    "jquery.maskedinput": [
+        "dist/jquery.maskedinput.min.js"
+    ]
 };

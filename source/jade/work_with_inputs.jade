@@ -1,0 +1,27 @@
+include helpers/bemto
+include helpers/variables
+include helpers/mixins
+
+-bemto_settings_prefix = 'b-'
+
+doctype html
+html
+	head
+		title text
+		include inc/head
+	body(class="p-text")
+		include partials/header
+		.l-container
+			+b('section').section
+				.l-container-xsm
+					h2.-text-center input mask for phone
+					input(type='text').js-phone-mask
+			+b('section').section
+				.l-container-xsm
+					h2.-text-center input counter
+					input(type='text')
+
+
+		include partials/footer
+		include inc/vendor-scripts
+		script(src="js/client.min.js")

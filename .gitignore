@@ -1,0 +1,8 @@
+node_modules
+build
+bower_components
+PSD
+.DS_Store
+Desktop.ini
+Thumbs.db
+.vscode

@@ -1,0 +1,168 @@
+html
+	height 100%
+	font-size $rootFontSize, false
+	user-select auto
+
+body
+	font-family sans-serif
+	min-height 100%
+	position relative
+	-webkit-text-size-adjust 100%
+	-webkit-font-size-adjust 100%
+	@media $max_sm
+		width 992px
+
+img
+	display block
+
+h1, h2, h3, h4, h5
+	color #000
+	line-height 18px
+	font-weight 600
+	margin-bottom 10px
+
+h1
+	font-size 25px
+h2
+	font-size 22px
+h3
+	font-size 20px
+h4
+	font-size 18px
+h5
+	font-size 17px
+
+p
+	margin-bottom 20px
+	&:last-child
+		margin-bottom 0
+
+ul, ol
+	margin-bottom 20px
+	li
+		margin-bottom 10px
+
+ul
+	list-style none
+
+table
+	width 100%
+	border 1px solid #d3d3d3
+	border-radius 15px
+	border-collapse separate
+	overflow hidden
+	margin 27px 0
+	th, td
+		padding 14px 20px
+		border-bottom 1px solid #d3d3d3
+		border-right 1px solid #d3d3d3
+		line-height 20px
+		font-size 14px
+		vertical-align top
+		&:last-child
+			border-right 0
+	th
+		font-weight 500
+		font-size 16px
+		background-color #ebebeb
+		text-align left
+		color #242424
+		&.small
+			width 580px
+	td
+		color #7c7c7c
+	tr
+		&:last-child
+			td, td
+				border-bottom 0
+
+i
+	font-style italic
+
+b, strong
+	font-weight 600
+
+button
+	border 0
+
+a
+	cursor pointer
+
+._no-border, ._no-border *
+	border 0
+
+._img-left,
+._img-right
+	margin-bottom 14px
+
+._img-left
+	float left
+	margin-right 14px
+
+._img-right
+	float right
+	margin-left 14px
+
+._text-center
+	text-align center
+
+._text
+	> p
+		&:last-child
+			margin-bottom 0
+
+.fancybox-skin
+	box-shadow none !important
+	border-radius 0
+
+.fancybox-wrap
+	opacity 0
+.compensate-for-scrollbar
+	padding-right 17px
+
+.owl-carousel .owl-item
+	-webkit-transform translateZ(0)
+
+.swiper-container
+	.swiper-prev, .swiper-next
+		vAlign()
+	.swiper-prev
+		left 0
+	.swiper-next
+		right 0
+
+.-hidden-lg
+	@media $max_lg
+		display none
+.-hidden-md
+	@media $max_md
+		display none
+.-hidden-sm
+	@media $max_sm
+		display none
+.-hidden-xs
+	@media $max_xs
+		display none
+
+.-visible-lg
+	display none
+	@media $max_lg
+		display block
+.-visible-md
+	@media $max_md
+		display block
+	@media $min_lg
+		display none
+.-visible-sm
+	@media $max_sm
+		display block
+	@media $min_md
+		display none
+.-visible-xs
+	@media $max_xs
+		display block
+	@media $max_sm
+		display none
+
+.im-popup
+	opacity 0

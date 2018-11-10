@@ -14,15 +14,10 @@ html
 		.l-container
 			+b('section').section
 				.l-container-xsm
-					h2.-text-center input mask for phone
-					input(type='text').js-phone-mask
-			+b('section').section
-				.l-container-xsm
-					h2.-text-center input counter
-					div.flex-in-row
-						+b('a')(href='#').btn.js-minus -
-						input(type='text' value='3' data-min='0' data-max='10').-text-center
-						+b('a')(href='#').btn.js-plus +
+					h2.-text-center.-base-margins Scroll bottom, to test isOnScreen script
+				.l-container-xsm(style='margin-top: 100vh')
+					img(src='../img/doge.png' style='opacity: 0').-base-margins.-block-center.isOnScreen
+					h2(style='opacity: 0').-text-center.-base-margins.isOnScreen isOnScreen work
 
 
 		include partials/footer

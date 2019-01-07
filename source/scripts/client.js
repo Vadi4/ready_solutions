@@ -47,11 +47,12 @@ function isOnScreen(el) {
 	};
 };	
 
-// ISONSCREEN END
 
 $(window).on('scroll', function() {
 	isOnScreen( $('.isOnScreen') );
 });
+
+// ISONSCREEN END
 
 // COUNTER JS
 

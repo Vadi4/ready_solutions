@@ -7,6 +7,8 @@ gulp.task('copy', function() {
       'source/images/**/*.png',
       'source/images/*.jpg',
       'source/images/**/*.jpg',
+      'source/images/*.mp4',
+      'source/images/**/*.mp4',      
       'source/images/*.svg',
       'source/images/**/*.svg',
       '!source/images/sprite/*',

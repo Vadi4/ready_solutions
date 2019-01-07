@@ -1,0 +1,25 @@
+include helpers/bemto
+include helpers/variables
+include helpers/mixins
+
+-bemto_settings_prefix = 'b-'
+
+doctype html
+html
+	head
+		title text
+		include inc/head
+	body(class="p-text")
+		include partials/header
+		.l-container
+			+b('section').section
+				.l-container-xsm
+					h2.-text-center.-base-margins Scroll bottom, to test isOnScreen script
+				.l-container-xsm(style='margin-top: 100vh')
+					img(src='../img/doge.png' style='opacity: 0').-base-margins.-block-center.isOnScreen
+					h2(style='opacity: 0').-text-center.-base-margins.isOnScreen isOnScreen work
+
+
+		include partials/footer
+		include inc/vendor-scripts
+		script(src="js/client.min.js")

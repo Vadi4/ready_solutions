@@ -1,0 +1,66 @@
+.b-custom-checkbox, .b-custom-radiobox
+	&__input
+		display none
+		&:checked
+			+
+				.b-custom-checkbox, .b-custom-radiobox
+					&__label
+						&:after
+							opacity 1
+						&:before
+							background-color #4286f4
+							border-color #4286f4
+	&__label
+		display block
+		position relative
+		padding-left 22px
+		cursor pointer
+		&:before, &:after
+			position absolute
+			
+.b-custom-checkbox
+	&__label
+		&:before
+			content ''
+			width 15px
+			height 15px
+			border #adb5bd solid 1px
+			border-radius 2px
+			transition .25s background-color, .25s color
+		&:after
+			content '\2714'
+			height 15px
+			width 15px
+			line-height 15px
+			text-align center
+			opacity 0
+			color #fff
+			transition .25s opacity
+		&:before, &:after
+			left 0
+			vAlign()
+			
+.b-custom-radiobox
+	&__label
+		&:before
+			content ''
+			width 15px
+			height 15px
+			border #adb5bd solid 1px
+			border-radius 50%
+			transition .25s background-color, .25s color
+		&:after
+			content ''
+			height 5px
+			width 5px
+			border-radius 50%
+			text-align center
+			opacity 0
+			background-color #fff
+			transition .25s opacity
+		&:before
+			left 0
+			vAlign()
+		&:after
+			top 5px
+			left 5px

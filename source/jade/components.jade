@@ -1,0 +1,35 @@
+include helpers/bemto
+include helpers/variables
+include helpers/mixins
+
+-bemto_settings_prefix = 'b-'
+
+doctype html
+html
+	head
+		title text
+		include inc/head
+	body(class="p-text")
+		include partials/header
+
+		.b-common-wrap
+			+b('section').section
+				.l-container
+					h2.-text-center Custom checkbox
+					.l-container-xsm
+						+b('').custom-checkbox
+							+e('input')(type='checkbox' id='checkbox_1').input
+							+e('label')(for='checkbox_1').label custom checkbox
+			+b('section').section
+				.l-container
+					h2.-text-center Custom radiobox
+					.l-container-xsm
+						+b('').custom-radiobox
+							+e('input')(type='radio' id='radio_1' name='radio').input
+							+e('label')(for='radio_1').label custom radiobox
+
+
+
+		include partials/footer
+		include inc/vendor-scripts
+		script(src="js/client.min.js")

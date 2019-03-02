@@ -8,7 +8,7 @@ var connect = require('gulp-connect');
 var plumber = require('gulp-plumber');
 
 gulp.task('stylus', function() {
-  gulp.src(['source/stylus/common.styl','source/stylus/critical.styl'])
+  gulp.src(['source/stylus/common.styl','source/stylus/critical.styl','source/stylus/components.styl'])
   .pipe(stylus())
   .pipe(mmq({
     log: true

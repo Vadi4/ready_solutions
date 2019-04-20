@@ -44,5 +44,8 @@ module.exports = {
     // ],
     "jquery.maskedinput": [
         "dist/jquery.maskedinput.min.js"
+    ],
+    "javascript-debounce": [
+        "dist/javascript-debounce.min.js"
     ]
 };

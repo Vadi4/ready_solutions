@@ -91,3 +91,23 @@ function checkCountBtnState(input) {
 };
 
 // END COUNTER JS
+
+//	DEBOUNCE THROTTLE JS
+
+$(window).on('resize', function() {
+	debounceTest('simple function');
+})
+
+if ('addEventListener' in window) {
+    var handleResize = debounce(function() {
+    	debounceTest('debounce function');
+    }, 250);
+
+    window.addEventListener('resize', handleResize);
+}
+
+function debounceTest(text) {
+	console.log( text );
+}
+
+// 	END DEBOUNCE THROTTLE

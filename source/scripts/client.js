@@ -94,20 +94,61 @@ function checkCountBtnState(input) {
 
 //	DEBOUNCE THROTTLE JS
 
-$(window).on('resize', function() {
-	debounceTest('simple function');
-})
+// $(window).on('resize', function() {
+// 	debounceTest('simple function');
+// })
 
-if ('addEventListener' in window) {
-    var handleResize = debounce(function() {
-    	debounceTest('debounce function');
-    }, 250);
+// if ('addEventListener' in window) {
+//     var handleResize = debounce(function() {
+//     	debounceTest('debounce function');
+//     }, 250);
 
-    window.addEventListener('resize', handleResize);
-}
+//     window.addEventListener('resize', handleResize);
+// };
 
-function debounceTest(text) {
-	console.log( text );
-}
+// function debounceTest(text) {
+// 	console.log( text );
+// }
 
 // 	END DEBOUNCE THROTTLE
+
+// START HIDDEN TEXT
+
+$(function() {
+	checkHiddenText();
+});
+
+$(window).on('resize', function() {
+	checkHiddenText();
+});
+
+function checkHiddenText() {
+	console.log('hidden text');
+	$('.js-hidden-text-wrap').each( function() {
+		var $this = $(this);
+		var $childrenWrap = $this.children('div');
+		var $showMore = $this.siblings('.js-show-more');
+
+		if( parseInt( $this.css('max-height')) < $childrenWrap.outerHeight() ) {
+			$showMore.css({'display': ''});
+		} else {
+			$showMore.css({'display': 'none'});
+		}
+	});
+};
+
+$('body').on('click', '.js-show-more, .js-hide-text', function(e) {
+	e.preventDefault();
+	var $this = $(this);
+	var dataText = $this.attr('data-text');
+	$this.attr('data-text', $this.text() ).text( dataText );
+	if( $this.hasClass('js-show-more') ) {
+		$this.siblings('.js-hidden-text-wrap').css({'max-height': 'none'});
+		$this.removeClass('js-show-more').addClass('js-hide-text');
+	} else {
+		$this.siblings('.js-hidden-text-wrap').css({'max-height': ''});
+		$this.removeClass('js-hide-text').addClass('js-show-more');
+	}
+});
+
+// END HIDDEN TEXT

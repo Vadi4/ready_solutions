@@ -20,9 +20,10 @@ html
 				.l-container-xsm
 					h2.-text-center input counter
 					div.flex-in-row
-						+b('a')(href='#').btn.js-minus -
-						input(type='text' value='3' data-min='0' data-max='10').-text-center
-						+b('a')(href='#').btn.js-plus +
+					+b('').btn-counter
+						+e('a')(href='#').btn.js-minus -
+						+e(type='text' value='3' data-min='0' data-max='10').input
+						+e('a')(href='#').btn.js-plus +
 
 
 		include partials/footer

@@ -94,21 +94,21 @@ function checkCountBtnState(input) {
 
 //	DEBOUNCE THROTTLE JS
 
-// $(window).on('resize', function() {
-// 	debounceTest('simple function');
-// })
+$(window).on('resize', function() {
+	debounceTest('simple function');
+})
 
-// if ('addEventListener' in window) {
-//     var handleResize = debounce(function() {
-//     	debounceTest('debounce function');
-//     }, 250);
+if ('addEventListener' in window) {
+	var handleResize = debounce(function() {
+		debounceTest('debounce function');
+	}, 250);
 
-//     window.addEventListener('resize', handleResize);
-// };
+    window.addEventListener('resize', handleResize);
+};
 
-// function debounceTest(text) {
-// 	console.log( text );
-// }
+function debounceTest(text) {
+	console.log( text );
+}
 
 // 	END DEBOUNCE THROTTLE
 
